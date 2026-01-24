@@ -42,6 +42,33 @@ const About = () => {
           </p>
         </div>
 
+        {/* Heritage Section with Old Photo */}
+        <div className="mb-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <h3 className="text-3xl font-bold text-truck-blue-900 mb-6">Our Heritage</h3>
+              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                As one of Chicago's original drayage companies, Jack Freeman Trucking has been a cornerstone of the region's logistics industry for decades. Our deep roots in the Chicago area give us unparalleled knowledge of local operations and infrastructure.
+              </p>
+              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                Through our investment in technology, we have developed a load-tracking program that ensures customers get as much time as possible to schedule their shipments. With our scheduling software, we manage the most complex customer needs to ensure they're moving the right product at the right time in the most cost-efficient manner.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Over the years, our service area has grown to a 500 mile radius of Chicago, serving the entire Midwest region with the same dedication and expertise that has defined us from the beginning.
+              </p>
+            </div>
+            <div className="order-1 md:order-2">
+              <div className="rounded-lg overflow-hidden shadow-2xl">
+                <img
+                  src="/assets/OldSchoolPhoto.jpg"
+                  alt="Freeman Trucking - Historic Photo"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Company Info */}
         <div className="grid md:grid-cols-2 gap-12 mb-20">
           <div>
