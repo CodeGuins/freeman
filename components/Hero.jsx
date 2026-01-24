@@ -1,30 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="relative bg-truck-blue-900 h-screen flex items-center justify-center">
+    <div className="relative bg-truck-blue-900 min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background overlay with gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-truck-blue-900/90 to-truck-blue-800/70 z-10"></div>
       
       {/* Placeholder background image - using a trucking-themed pattern */}
-      <div className="absolute inset-0 bg-cover bg-center opacity-30" 
-           style={{
-             backgroundImage: `url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&h=1080&fit=crop')`,
-           }}>
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-30" 
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&h=1080&fit=crop')`,
+          transform: `translateY(${scrollY * 0.5}px)`,
+        }}>
       </div>
 
       {/* Hero content */}
-      <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto py-20">`
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          Delivering Excellence
+          Chicago's Original
           <span className="block text-truck-orange-500 mt-2">
-            Across America
+            Drayage Company
           </span>
         </h1>
         
         <p className="text-xl sm:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Your trusted partner in freight logistics.
+          As one of Chicago's original drayage companies, Jack Freeman Trucking has the experience to handle your intermodal needs. With a selection of 20', 40', Tri-axle, and eight pin chassis there is no container that we cannot handle.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

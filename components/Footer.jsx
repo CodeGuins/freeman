@@ -12,26 +12,14 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <div className="bg-truck-orange-500 p-2 rounded">
-                <svg
-                  className="h-8 w-8 text-white"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
-                </svg>
-              </div>
-              <span className="ml-3 text-white text-xl font-bold">
-                Freeman Trucking
-              </span>
+              <img
+                src="/assets/jack_freeman_logo.png"
+                alt="Freeman Trucking"
+                className="h-12 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Delivering excellence across America since 1999.
+              As one of Chicago's original drayage companies, serving the Chicago Region and Midwest with excellence in logistics.
             </p>
             <div className="flex space-x-4 mt-4">
               {/* Social media icons */}
@@ -91,27 +79,32 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a href="#" className="hover:text-truck-orange-500 transition-colors duration-200">
-                  Long Haul Freight
+                  Intermodal Trucking
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-truck-orange-500 transition-colors duration-200">
-                  Refrigerated Transport
+                  Flatbed
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-truck-orange-500 transition-colors duration-200">
-                  Expedited Shipping
+                  Overweight Loads
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-truck-orange-500 transition-colors duration-200">
-                  Warehousing
+                  Transloading
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-truck-orange-500 transition-colors duration-200">
-                  Logistics Solutions
+                  Freight Storage
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-truck-orange-500 transition-colors duration-200">
+                  Chassis Rental
                 </a>
               </li>
             </ul>
@@ -127,16 +120,16 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                 </svg>
                 <span className="text-sm">
-                  123 Freight Avenue<br/>
-                  Commerce City, CO 80022
+                  4948 S Western Ave<br/>
+                  Chicago, IL 60609
                 </span>
               </li>
               <li className="flex items-center">
                 <svg className="h-5 w-5 text-truck-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                 </svg>
-                <a href="tel:+1-800-FREEMAN" className="text-sm hover:text-truck-orange-500">
-                  (800) FREEMAN
+                <a href="tel:+17737744100" className="text-sm hover:text-truck-orange-500">
+                  (773) 774-4100
                 </a>
               </li>
               <li className="flex items-center">
