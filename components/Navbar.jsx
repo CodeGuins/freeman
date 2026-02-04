@@ -22,10 +22,10 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Fleet', href: '#fleet' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Fleet', href: '/fleet' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#home" className="flex items-center">
+            <a href="/" className="flex items-center">
               <img
                 src="/assets/jack_freeman_logo.png"
                 alt="Freeman Trucking"
