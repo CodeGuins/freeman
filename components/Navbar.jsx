@@ -26,7 +26,7 @@ const Navbar = () => {
     { name: 'Services', href: '#services' },
     { name: 'About', href: '#about' },
     { name: 'Fleet', href: '#fleet' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -43,9 +43,10 @@ const Navbar = () => {
               <img
                 src="/assets/jack_freeman_logo.png"
                 alt="Freeman Trucking"
-                className={`h-12 w-auto transition-all duration-300 ${
-                  isScrolled ? 'brightness-0 invert' : ''
-                }`}
+                className="h-12 w-auto transition-all duration-300"
+                style={isScrolled ? {
+                  filter: 'brightness(0) saturate(100%) invert(52%) sepia(98%) saturate(2795%) hue-rotate(360deg) brightness(102%) contrast(101%)'
+                } : {}}
               />
             </a>
           </div>
@@ -58,7 +59,7 @@ const Navbar = () => {
                 href={link.href}
                 className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   isScrolled
-                    ? 'text-white hover:text-truck-orange-500'
+                    ? 'text-truck-orange-500 hover:text-truck-orange-600'
                     : 'text-truck-blue-900 hover:text-truck-orange-500'
                 }`}
               >
@@ -78,7 +79,7 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               className={`p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-truck-orange-500 ${
-                isScrolled ? 'text-white' : 'text-truck-blue-900'
+                isScrolled ? 'text-truck-orange-500' : 'text-truck-blue-900'
               }`}
               aria-label="Toggle menu"
             >

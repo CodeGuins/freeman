@@ -29,7 +29,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* About Header */}
         <div className="text-center mb-16">
@@ -142,28 +142,16 @@ const About = () => {
           <h3 className="text-3xl font-bold text-truck-blue-900 mb-12 text-center">
             Meet Our Team
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {team.map((member, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 text-center border-t-4 border-truck-orange-500"
               >
-                <div className="aspect-w-3 aspect-h-4 bg-gray-200">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-80 object-cover"
-                    onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/400x500/1e293b/ffffff?text=' + member.name.split(' ').map(n => n[0]).join('');
-                    }}
-                  />
-                </div>
-                <div className="p-6 text-center">
-                  <h4 className="text-xl font-bold text-truck-blue-900 mb-2">
-                    {member.name}
-                  </h4>
-                  <p className="text-truck-orange-500 font-medium">{member.role}</p>
-                </div>
+                <h4 className="text-2xl font-bold text-truck-blue-900 mb-2">
+                  {member.name}
+                </h4>
+                <p className="text-truck-orange-500 font-medium text-lg">{member.role}</p>
               </div>
             ))}
           </div>
@@ -172,5 +160,4 @@ const About = () => {
     </section>
   );
 };
-
 export default About;

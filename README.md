@@ -1,53 +1,117 @@
-# Getting Started with Create React App
+# Freeman Trucking Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern Next.js website for Freeman Trucking - Chicago's original drayage company.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+### Prerequisites
 
-### `npm start`
+- Node.js 16+ installed
+- npm or yarn package manager
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install
+```
 
-### `npm test`
+### Environment Variables
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Create a `.env.local` file in the root directory with the following variables:
 
-### `npm run build`
+```bash
+# Resend API (for contact form emails)
+RESEND_API_KEY=re_your_api_key_here
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# reCAPTCHA v3 (to be configured when domain is live)
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your_site_key_here
+RECAPTCHA_SECRET_KEY=your_secret_key_here
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+See `.env.local.example` for reference.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Development
 
-### `npm run eject`
+```bash
+npm run dev
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Open [http://localhost:3000](http://localhost:3000) to view the site in development mode.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Build
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run build
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Deployment
 
-## Learn More
+Currently deployed on Vercel for preview purposes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Modern, responsive design with Tailwind CSS
+- Sticky navigation with scroll effects
+- Hero section with parallax background
+- Services grid
+- About section
+- Contact form with spam protection
+- Email notifications via Resend
 
-### Code Splitting
+## TODO
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### When Domain Goes Live
+
+- [ ] **Configure reCAPTCHA v3**
+  - Go to https://www.google.com/recaptcha/admin/create
+  - Select reCAPTCHA v3
+  - Add the live domain
+  - Update `.env.local` with the Site Key and Secret Key
+  - Add domain to Vercel environment variables
+
+- [ ] **Update Resend Email Domain**
+  - Verify custom domain in Resend dashboard
+  - Update "from" address in `/pages/api/contact.js` from `onboarding@resend.dev` to `contact@yourdomain.com`
+
+- [ ] **Update Contact Information**
+  - Add real phone number in `/components/Contact.jsx`
+  - Add real address in `/components/Contact.jsx`
+  - Update email if different from freemantruckingcontact@gmail.com
+
+- [ ] **SEO & Analytics**
+  - Add Google Analytics
+  - Update meta descriptions
+  - Add favicon
+  - Create sitemap.xml
+  - Configure robots.txt
+
+### Future Enhancements
+
+- [ ] Add fleet showcase page
+- [ ] Add customer testimonials
+- [ ] Add service request tracking portal
+- [ ] Implement blog/news section
+- [ ] Add multilingual support
+
+## Tech Stack
+
+- **Framework:** Next.js 16
+- **Styling:** Tailwind CSS
+- **Email:** Resend
+- **Spam Protection:** Google reCAPTCHA v3
+- **Deployment:** Vercel
+
+## Project Structure
+
+```
+freeman/
+├── components/       # React components
+├── pages/           # Next.js pages and API routes
+├── public/          # Static assets
+├── src/             # Source files (CSS)
+└── styles/          # Global styles
+```
 
 ### Analyzing the Bundle Size
 
