@@ -67,7 +67,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="#quote"
+              href="/get-a-quote"
               className="bg-truck-orange-500 hover:bg-truck-orange-600 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Get Quote
@@ -120,7 +120,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="#quote"
+              href="/get-a-quote"
               className="bg-truck-orange-500 hover:bg-truck-orange-600 text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 mt-2"
               onClick={() => setIsOpen(false)}
             >

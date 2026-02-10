@@ -17,11 +17,11 @@ const Hero = () => {
       {/* Background overlay with gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-truck-blue-900/90 to-truck-blue-800/70 z-10"></div>
       
-      {/* Placeholder background image - using a trucking-themed pattern */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-30" 
+      {/* Background image - Biggie */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&h=1080&fit=crop')`,
+          backgroundImage: `url('/assets/Biggie.jpeg')`,
           transform: `translateY(${scrollY * 0.5}px)`,
         }}>
       </div>
@@ -41,7 +41,7 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-            href="#quote"
+            href="/get-a-quote"
             className="bg-truck-orange-500 hover:bg-truck-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg w-full sm:w-auto"
           >
             Get a Free Quote

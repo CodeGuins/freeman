@@ -140,7 +140,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h3 className="text-2xl font-bold text-truck-blue-900 mb-6">
-              Request a Quote
+              Contact Us
             </h3>
 
             {status.message && (

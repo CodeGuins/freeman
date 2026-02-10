@@ -10,36 +10,15 @@ const About = () => {
     'Chassis rental'
   ];
 
-  const team = [
-    {
-      name: 'Jonathan Freeman',
-      role: 'Sales',
-      image: '/assets/team/jonathan-placeholder.jpg',
-    },
-    {
-      name: 'Lou Perales',
-      role: 'Operations/Dispatch',
-      image: '/assets/team/lou-placeholder.jpg',
-    },
-    {
-      name: 'Juan Vargas',
-      role: 'Operations/Dispatch',
-      image: '/assets/team/juan-placeholder.jpg',
-    },
-  ];
-
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="about" className="pt-24 pb-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* About Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-truck-blue-900 mb-4">
             About Freeman Trucking
           </h2>
-          <div className="w-24 h-1 bg-truck-orange-500 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Serving the Chicago Region and Midwest with excellence in logistics since 1999
-          </p>
+          <div className="w-24 h-1 bg-truck-orange-500 mx-auto"></div>
         </div>
 
         {/* Heritage Section with Old Photo */}
@@ -134,26 +113,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Team Section */}
-        <div className="mt-20">
-          <h3 className="text-3xl font-bold text-truck-blue-900 mb-12 text-center">
-            Meet Our Team
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {team.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 text-center border-t-4 border-truck-orange-500"
-              >
-                <h4 className="text-2xl font-bold text-truck-blue-900 mb-2">
-                  {member.name}
-                </h4>
-                <p className="text-truck-orange-500 font-medium text-lg">{member.role}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>
